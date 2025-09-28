@@ -5,6 +5,7 @@ import LoginPage from './LoginPage/LoginPage';
 import Hero from './Hero/Hero'; 
 import Footer from './Footer/Footer';
 import AboutPage from './AboutPage/AboutPage';
+import { DataProvider } from "./DataContext";
 
 import {
   BrowserRouter as Router,
@@ -14,7 +15,8 @@ import {
 
 function App() {
   return (
-    <Router>
+    <DataProvider>
+      <Router>
       <Menu />
       <Hero />
       <div className="mainContainer">
@@ -26,6 +28,7 @@ function App() {
       </div>
       <Footer />
     </Router>
+    </DataProvider>
   );
 }
 
